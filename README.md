@@ -8,5 +8,8 @@
 
 ## Plan for development checklist
 - debug the error in .tex file of the full report and thai article in pre-cambrian.tex
-- watermarking in the full report file when the author would like to have `draftreport` option.
+- list of symbols and glossaries
 - documentation for LaTeXing
+
+## Done!
+- watermarking in the full report file when the author would like to have `draftreport` option.
