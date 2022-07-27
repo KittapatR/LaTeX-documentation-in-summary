@@ -1,6 +1,9 @@
 # LaTeX (*Le-Tek*) in summary
 *Kittapat Ratanaphupha, 24 July 2022*
 
+## Here is a thesis format for (CPE/HDS PSCM) KMUTT
+https://www.overleaf.com/project/62945f9e32a2c2322e1d251e
+
 ## External links for reference
 - https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols (for doing the equations)
 - https://www.mathcha.io/ (for doing a figure esp. schematic and mathematical diagram)
