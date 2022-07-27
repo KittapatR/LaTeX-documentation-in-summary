@@ -12,6 +12,12 @@ https://www.overleaf.com/read/vwtpfxztqgbv
 
 `extra`: the report will support **special** annotations for joint degree or its equivalent.
 
+### How to use the report template
+1. Click the link I provided above
+2. (For non-Overleaf users) Click Menu -> Download: Source
+3. (For Overleaf users) Click Menu -> Actions: Copy Project
+4. Let's modify it!
+
 ## External links for reference
 - https://oeis.org/wiki/List_of_LaTeX_mathematical_symbols (for doing the equations)
 - https://www.mathcha.io/ (for doing a figure esp. schematic and mathematical diagram)
