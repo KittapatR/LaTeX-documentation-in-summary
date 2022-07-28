@@ -28,6 +28,7 @@ https://www.overleaf.com/read/vwtpfxztqgbv
 ## Plan for development checklist
 (28 July 2022)
 - documentation for LaTeXing [Finished: 1/4 parts]
+- conditional paging for list of figures and list of tables
 
 ## Done!
 - add `PAGE` to every pages in table of contents, list of tables and list of figures.
