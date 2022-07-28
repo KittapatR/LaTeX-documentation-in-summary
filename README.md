@@ -1,6 +1,8 @@
 # LaTeX (*Le-Tek*) in summary
 *Kittapat Ratanaphupha, 24 July 2022 – Present*
 
+This repo provides the KMUTT thesis template, Thai article template and Thai beamer template for Thai users esp. HDS PSCM KMUTT or KMUTT students.
+
 ## Here is a thesis format for (CPE/HDS PSCM) KMUTT
 https://www.overleaf.com/read/vwtpfxztqgbv
 

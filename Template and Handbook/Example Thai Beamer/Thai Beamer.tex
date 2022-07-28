@@ -1,0 +1,188 @@
+\documentclass[
+    smaller
+    %handout,
+]{beamer}
+
+% -------- Packages ---------
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{lmodern}
+\usepackage{pgfpages}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage{hyperref}
+\usepackage{xcolor}
+
+%------------ สำหรับการใช้ฟอนต์ภาษาไทย -----------%
+
+\usefonttheme{professionalfonts} % using non standard fonts for beamer
+\usepackage{xltxtra}
+
+\XeTeXlinebreaklocale "th-TH"
+\XeTeXlinebreakskip = 0pt plus 1pt
+\setsansfont[Scale=MatchLowercase]{TH Sarabun New}
+\newfontfamily{\thaifont}[Script=Default, Scale=MatchLowercase]{TH Sarabun New}
+\renewcommand{\baselinestretch}{1.3}
+
+% ----- Beamer tweaks -----
+\let\Tiny=\tiny % to prevent warnings from LaTeX (due to Beamer)
+\useoutertheme{infolines} 
+\mode<beamer>{\usetheme{default}}
+\usecolortheme{dove}
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent}
+\usefonttheme[onlymath]{serif}
+
+\linespread{1.5}
+\setbeamersize{text margin left=30pt}
+\setbeamersize{text margin right=30pt}
+
+\setbeamertemplate{itemize items}[circle]
+\setlength{\leftmargini}{1.2em}
+\setlength{\leftmarginii}{1em}
+
+\setcounter{tocdepth}{2}
+\setbeamertemplate{section in toc}[default]
+\AtBeginSection[]{ 
+  \begin{frame}[handout:0]
+    \frametitle{เนื้อหา} 
+    \tableofcontents[currentsection] 
+  \end{frame} 
+  \addtocounter{framenumber}{-1} 
+} 
+\setbeamerfont{itemize/enumerate body}{size=\normalsize}
+
+\setbeamertemplate{frametitle}
+{
+    \begin{centering}
+        \large      
+        \textbf{\insertframetitle}
+        \par
+    \end{centering}
+}
+
+% ----- Redefinition of frame (to reset footnote numbering at each frame) -----
+\let\oldframe\frame                         % backup old frame
+\let\endoldframe\endframe                   % backup old endframe
+\renewenvironment{frame}{%
+    \setcounter{footnote}{0}\oldframe%
+}{\endoldframe}                             % Reset the footnote counter at each frame
+
+
+% ----- Footnote symbols -----
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}   
+
+
+% ----- Handout settings -----
+\mode<handout>{\usetheme{default}}
+\mode<handout>{\pgfpagesuselayout{4 on 1}[a4paper,border shrink=5mm, landscape]}
+\mode<handout>{\pgfpageslogicalpageoptions{1}{border code=\pgfusepath{stroke}}}
+\mode<handout>{\pgfpageslogicalpageoptions{2}{border code=\pgfusepath{stroke}}}
+\mode<handout>{\pgfpageslogicalpageoptions{3}{border code=\pgfusepath{stroke}}}
+\mode<handout>{\pgfpageslogicalpageoptions{4}{border code=\pgfusepath{stroke}}}
+
+
+% ----- fancyhdr -----
+\setbeamertemplate{headline}{} % No header
+\setbeamertemplate{footline}{ % Footer
+    \leavevmode
+    \vskip0pt
+    \hbox{ 
+        % left
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,left]{title in head/foot}
+        \hspace*{25pt}
+        \usebeamerfont{title in head/foot}\textcolor{gray}{\inserttitle}
+    \end{beamercolorbox}
+
+    % right
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,right]{page number in head/foot}
+            \usebeamerfont{page number in head/foot}\insertpagenumber{}
+        \hspace*{30pt}
+    \end{beamercolorbox}
+    }
+    \vskip17pt 
+}
+
+\def \epic {คณิตศาสตร์วันละหลายข้อก็ได้มั้ง}
+\title{สวัสดีชาว CU GradMaths}            % topic from syllabus
+\subtitle{ชื่อหัวเรื่องรอง}
+\author{กฤตพัฒน์ รัตนภูผา}
+\institute{\today}
+\newcommand{\email}{เมลล์ฉันเอง}
+
+
+\begin{document}
+% ----- Title Page -----
+{% these braces define the local group associated to the titlepage
+
+\setbeamertemplate{headline}{ % header
+    \leavevmode
+    \vskip20pt
+    \hbox{
+    % left
+    \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.25ex,dp=1ex,left]{subtitle in head/foot}
+            \hspace*{25pt}
+            \usebeamerfont{subtitle in head/foot}\insertshortsubtitle
+    \end{beamercolorbox}
+
+    % center
+    \begin{beamercolorbox}[wd=.33\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}
+        % nothing
+    \end{beamercolorbox}
+
+    % right
+    \begin{beamercolorbox}[wd=.32\paperwidth,ht=2.25ex,dp=1ex,right]{institute in head/foot}
+            \hfill
+            \usebeamerfont{institute in head/foot}\insertinstitute
+            \hspace*{30pt}
+    \end{beamercolorbox}
+    }
+}
+
+\setbeamertemplate{footline}{ % footer
+    \leavevmode
+    \vskip0pt%
+    \hbox{
+    % left
+    \begin{beamercolorbox}[wd=.333\paperwidth,ht=2.25ex,dp=1ex,left]{author in head/foot}
+        \hspace*{25pt}
+        \usebeamerfont{author in head/foot}\insertauthor
+    \end{beamercolorbox}
+
+    % center
+    \begin{beamercolorbox}[wd=.333\paperwidth,ht=2.25ex,dp=1ex,center]{author in head/foot}
+        \usebeamerfont{author in head/foot}\texttt{\email}
+    \end{beamercolorbox}
+
+    % right
+    \begin{beamercolorbox}[wd=.333\paperwidth,ht=2.25ex,dp=1ex,right]{page number in head/foot}
+        \usebeamerfont{page number in head/foot}\textcolor{black}{\insertpagenumber{}}
+        \hspace*{30pt}
+    \end{beamercolorbox}
+    }
+    \vskip17pt
+}
+
+\begin{frame}
+\frametitle{}
+    \begin{center}
+    %\vspace{-3mm}
+    {\large \textbf{\epic}}\\
+    {\Large \textbf{\inserttitle}}
+    \end{center}
+    \tableofcontents
+\end{frame}  
+
+} 
+
+%
+\section{สมการเชิงอนุพันธ์ย่อย}
+
+\begin{frame}{สมการลาปลาซ}
+	ทักทาย
+	\begin{equation}
+		\Delta f = 0
+	\end{equation}
+\end{frame}
+
+\end{document}
