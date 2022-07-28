@@ -27,9 +27,10 @@ https://www.overleaf.com/read/vwtpfxztqgbv
 
 ## Plan for development checklist
 (28 July 2022)
-- list of symbols and glossaries in the full report template
 - documentation for LaTeXing [Finished: 1/4 parts]
 
 ## Done!
+- add `PAGE` to every pages in table of contents, list of tables and list of figures.
 - watermarking in the full report template when the author would like to have `draftreport` option. (28 Jul 2022)
 - Update thai article template (TH Sarabun New is required according to this template; 28 Jul 2022)
+- list of symbols and glossaries in the full report template (at first versions)
