@@ -1,5 +1,5 @@
 \documentclass[
-    smaller
+    smaller, t
     %handout,
 ]{beamer}
 
@@ -42,11 +42,14 @@
 \setlength{\leftmarginii}{1em}
 
 \setcounter{tocdepth}{2}
-\setbeamertemplate{section in toc}[default]
+\setbeamertemplate{section in toc}{\hspace*{1em}\inserttocsectionnumber.~\inserttocsection\par}
+\setbeamertemplate{subsection in toc}{\hspace*{2em}\inserttocsectionnumber.\inserttocsubsectionnumber.~\inserttocsubsection\par}
 \AtBeginSection[]{ 
   \begin{frame}[handout:0]
     \frametitle{เนื้อหา} 
-    \tableofcontents[currentsection] 
+       \begin{minipage}[t]{\textwidth}
+	\tableofcontents[currentsection] 
+       \end{minipage}
   \end{frame} 
   \addtocounter{framenumber}{-1} 
 } 
@@ -170,7 +173,9 @@
     {\large \textbf{\epic}}\\
     {\Large \textbf{\inserttitle}}
     \end{center}
+    \begin{minipage}[t]{\textwidth}
     \tableofcontents
+    \end{minipage}
 \end{frame}  
 
 } 
